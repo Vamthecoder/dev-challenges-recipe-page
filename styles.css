@@ -30,7 +30,7 @@ h1 {
 
 #cheese-img {
     width: 100%;    
-    height: 70vh;
+    height: 40vh;
 }
 
 /* Start of Side Section which contains side info with icons */
@@ -65,17 +65,19 @@ h1 {
     margin-right: 10px;
 }
 
-
-
 @media screen and (min-width: 900px) {
 
     .side-details {
         border-radius: 15px;
-        box-shadow: 5px 0 20px #00000033;
+        box-shadow: 0px 0 20px #00000033;
         height: 367px;
         width: 216px;  
         padding-left: 40px;
         padding-top: 30px;
+    }
+
+    #cheese-img {
+        height: 70vh;   
     }
     
     #recipe-details-container {
@@ -103,23 +105,18 @@ h1 {
 
 
 .text2 {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 50px minmax(100px, 650px);
 }
 
 .ingredients-container p {
     margin-block: 30px;
 }
 
-.cake, .ingreds {
-    margin-block: 0.7rem;
-} 
-
 input[type="checkbox"]{
     width: 1.5rem;
-    margin-inline: 10px ;
+    margin: 0.7rem ;
     height: 20px;
-    list-style-position: center;
 }
 
 .instructions ol {
@@ -128,7 +125,6 @@ input[type="checkbox"]{
 
 ol div {
     display: flex;
-    position: relative;
 }
 
 ol p {
@@ -139,23 +135,16 @@ ol p {
     background-color: orange;
     border-radius: 5px;
     color: white;
-    font-weight: bolder;
+    font-weight: bold;
     font-family: 'Playfair-Display', serif;
-    position: sticky;
-    z-index: 1;
     font-size: 18px;
     margin-top: 10px;
-    margin-right: 10px;
+    margin-right: 0.85rem;
 }
 
 .order-list {
-    position: sticky;
-    width:  70% ;
+    width:  max(60%, 500px ) ;
     padding-block: 10px;
-}
-
-.ol p:first-child {
-    margin-top: unset;
 }
 
 #source {
@@ -176,4 +165,49 @@ footer {
 footer a {
     text-decoration: none;
     color: #0009;
+}
+
+@media screen and (max-width: 850px) {
+    .flex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .side-details {
+        width: 90%;
+        padding-inline-start: 30px;
+    }
+
+    main {
+        width: 80%
+    }
+}
+
+@media screen and (max-width: 450px) {
+    main {
+        width: 90%;
+    }
+
+    #cheese-img {
+        height: 25vh; 
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    ol p {
+        min-width: 40px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    
+    h1 {
+        font-size: 26px;
+    }
 }
