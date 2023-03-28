@@ -65,6 +65,8 @@ h1 {
     margin-right: 10px;
 }
 
+
+/* for desktops to work better with grids */
 @media screen and (min-width: 900px) {
 
     .side-details {
@@ -167,6 +169,8 @@ footer a {
     color: #0009;
 }
 
+
+/* for ipad and tablets */
 @media screen and (max-width: 850px) {
     .flex {
         display: flex;
@@ -183,6 +187,8 @@ footer a {
     }
 }
 
+
+/* for mobile screens */
 @media screen and (max-width: 450px) {
     main {
         width: 90%;
